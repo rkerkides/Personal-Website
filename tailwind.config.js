@@ -17,18 +17,18 @@ module.exports = {
         '70/30': '70% 28%',
       },
       animation: {
-        aurora: "aurora 60s linear infinite",
+        aurora: "aurora 30s ease-in-out infinite",
       },
       keyframes: {
         aurora: {
           from: {
-            backgroundPosition: "0% 50%",
+            backgroundPosition: "0% -50%", 
           },
           to: {
-            backgroundPosition: "100% 50%",
+            backgroundPosition: "100% 50%", 
           },
         },
-      },
+      },      
     },
   },
   plugins: [addVariablesForColors],

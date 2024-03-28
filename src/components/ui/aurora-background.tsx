@@ -17,9 +17,10 @@ export const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
-          className
-        )}
+            "relative flex flex-col h-[100vh] items-center justify-center bg-transparent text-slate-950 transition-bg",
+            className
+          )}
+          
         {...props}
       >
         <div className="absolute inset-0 overflow-hidden">
@@ -33,7 +34,7 @@ export const AuroraBackground = ({
             [background-image:var(--white-gradient),var(--aurora)]
             dark:[background-image:var(--dark-gradient),var(--aurora)]
             [background-size:300%,_200%]
-            [background-position:50%_50%,50%_50%]
+            [background-position:50%_0%,50%_0%]
             filter blur-[10px] invert dark:invert-0
             after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] 
             after:dark:[background-image:var(--dark-gradient),var(--aurora)]
