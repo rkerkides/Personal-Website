@@ -1,3 +1,38 @@
+/* Global settings */
+:root {
+  --primary-bg-color: #100079;
+  --scrollbar-track-color: #014eca;
+  --scrollbar-thumb-color: rgba(15, 115, 132, 0.959);
+  --scrollbar-thumb-hover-color: rgba(21, 4, 212, 0.911);
+  --navbar-bg-color: rgb(0, 25, 43);
+  --navbar-toggler-color: #02d9ff;
+  --home-bg-image: url(./assets/home-bg.jpg);
+  --underline-color: #02d9ff;
+  --particle-fixed-bg: #181a27;
+  --social-icon-bg: rgba(255, 255, 255, 0.972);
+  --social-icon-hover-color: #87209e;
+  --social-icon-bg-hover: #68187a;
+  --footer-bg-color: rgb(0, 25, 43);
+  --icon-color: #00c3ff;
+}
+
+.turquoise {
+  color: var(--navbar-toggler-color) !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+
+.aurora-background {
+  pointer-events: auto; /* Enable pointer events on the AuroraBackground */
+}
+
+.aurora-background * {
+  pointer-events: auto; /* Explicitly enable pointer events for all descendants */
+}
+
+
 /* --------- */
 /* Preloader */
 /* --------- */
@@ -8,7 +43,7 @@
   width: 100%;
   height: 100%;
   z-index: 999999; /* Highest z-index so it will be on top of everything */
-  background-color: #100079;
+  background-color: var(--primary-bg-color);
   background-image: url(./assets/preloader.svg);
   background-repeat: no-repeat; /* Only one instance of the image */
   background-position: center; /* Center the image */
@@ -30,12 +65,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #014eca;
+  background: var(--scrollbar-track-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(15, 115, 132, 0.959);
+  background: var(--scrollbar-thumb-color);
   border-radius: 12px;
 }
 
@@ -51,7 +86,7 @@
 
 /* Makes the navbar stick to the top of the viewport and applies a blur effect for a frosted glass look. */
 .sticky {
-  background-color: rgb(0, 25, 43) !important; /* Semi-transparent dark background */
+  background-color: var(--navbar-bg-color) !important; /* Semi-transparent dark background */
   transition: all 0.3s ease-out 0s !important; /* Smooth transition for any changes */
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important; /* Soft shadow for depth */
   backdrop-filter: blur(15px) !important; /* Blur effect on the background content */
@@ -75,7 +110,7 @@
 /* Style for the spans inside the navbar toggler, making them look like a hamburger icon. */
 .navbar-toggler span {
   display: block !important;
-  background-color: #02d9ff !important; /* Turquoise color for the toggler lines */
+  background-color: var(--navbar-toggler-color) !important; /* Turquoise color for the toggler lines */
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -117,7 +152,7 @@
   .navbar {
     padding: 1rem 2rem !important; /* Adjust padding */
     font-size: 1.4rem !important; /* Adjust font size */
-    background-color: #181a27 !important; /* Darker background for better contrast */
+    background-color: var(--particle-fixed-bg) !important; /* Darker background for better contrast */
   }
   .navbar-nav .nav-item a::after {
     display: none !important; /* Hide the decorative after element */
@@ -173,7 +208,7 @@
   height: 5px; /* Height of the underline */
   width: 0; /* Start width at 0 to animate */
   border-radius: 16px; /* Rounded corners for the underline */
-  background: #02d9ff; /* Turquoise background for the underline */
+  background: var(--underline-color); /* Turquoise background for the underline */
   z-index: -1; /* Place the underline below the text */
   transition: all 0.3s ease-out 0s; /* Smooth transition for the animation */
 }
@@ -189,9 +224,7 @@
 
 /* Applies a waving animation to elements with the .wave class */
 .wave {
-  animation-name: wave-animation; /* Links to the keyframes animation defined below */
   animation-duration: 2.1s; /* Duration of each wave animation cycle */
-  animation-iteration-count: infinite; /* The animation repeats indefinitely */
   transform-origin: 70% 70%; /* Sets the origin of transformation to bottom-left palm for natural wave effect */
   display: inline-block; /* Allows the animation to apply as elements are inline but need block behaviors */
 }
@@ -224,6 +257,7 @@
   position: fixed !important; /* Ensures particles are behind other content and cover the full screen */
   background-repeat: no-repeat !important;
   background-size: cover !important; /* Cover the entire area of the element */
+  pointer-events: none; /* Allows clicking through the particles to elements below */
   width: 100%;
   height: 100%;
 }
@@ -237,11 +271,10 @@
 .home-section {
   position: relative;
   z-index: -1; /* Ensures content layers above the background */
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg); /* A gradient on top of an image for depth */
+  background-image: var(--image-gradient), var(--home-bg-image); /* A gradient on top of an image for depth */
   background-position: top center; /* Ensures background image is centered */
   background-repeat: no-repeat; /* Background image does not repeat */
-  padding-bottom: 30px !important;
-  padding-top: 30px !important; /* Spacing at the top and bottom */
+  padding: 30px !important; /* Spacing at the top and bottom */
 }
 
 /* Styling for the content within the home section */
@@ -264,7 +297,7 @@
 
 /* Specific style for main names, changing the color for emphasis */
 .main-name {
-  color: #cd5ff8; /* Bright purple for visual interest */
+  color: var(--icon-color); /* Bright purple for visual interest */
 }
 
 /* Styles for a typewriter effect, including colors and font sizes */
@@ -320,6 +353,28 @@
   text-align: center; /* Centers the text for focus */
 }
 
+/* Style for the image container */
+.image-container {
+  position: relative; /* Establishes a positioning context for absolute children */
+  display: inline-block; /* Adjust as necessary to fit your layout */
+}
+
+/* Style for the line directly below the image */
+.image-divider {
+  display: block;
+  height: 2px; /* Thickness of the line */
+  background-color: #ffffff; /* Color of the line */
+  position: absolute;
+  bottom: 0; /* Aligns the line to the bottom of the image container */
+  left: 0;
+  right: 0;
+}
+
+/* Different shade for the background starting just below the line */
+.background-shade {
+  background-color: var(--footer-bg-color);
+}
+
 /* Body text within the about section, styled for readability */
 .home-about-body {
   padding-top: 50px; /* Space above the body text */
@@ -332,6 +387,8 @@
   text-align: center !important; /* Ensures social icons are centered */
   padding-top: 25px; /* Spacing above the social icons */
   color: white !important; /* White color for icons for contrast */
+  z-index: 10; /* Higher than the tsparticles */
+  position: relative; /* Needed for z-index to take effect */
 }
 
 /* Container for social links, ensuring they are centered and properly spaced */
@@ -341,6 +398,7 @@
   display: inline-block !important; /* Allows for inline layout with block behaviors */
   position: relative !important; /* Establishes a stacking context */
   padding-inline-start: 0 !important; /* Removes default padding */
+  pointer-events: auto; /* Enables pointer events for interaction */
 }
 
 /* Individual social icon styling, including size, color, and interaction effects */
@@ -352,7 +410,7 @@
   text-align: center !important; /* Centers the icon within the circle */
   font-size: 1.2em !important; /* Size of the icon */
   line-height: 2em !important; /* Centers the icon vertically */
-  background: rgba(255, 255, 255, 0.972) !important; /* White background with slight transparency */
+  background: rgba(255, 255, 255, 0.5) !important; /* White background with slight transparency */
   border-radius: 50% !important; /* Rounds the edges into a circle */
   transition: 0.5s !important; /* Smooth transition for hover effects */
 }
@@ -373,7 +431,7 @@
   width: 100%; /* Full width of the icon */
   height: 100%; /* Full height of the icon */
   border-radius: 50%; /* Maintains circular shape */
-  background: #68187a; /* Purple background for thematic consistency */
+  background: var(--primary-bg-color); /* Blue background for thematic consistency */
   transition: 0.5s; /* Smooth transition for hover effects */
   transform: scale(0.9); /* Slightly scaled down for a popping effect on hover */
   z-index: -1; /* Sits behind the icon */
@@ -382,7 +440,7 @@
 /* Enhances the hover effect, making the background and shadow more pronounced */
 .home-social-icons:hover::before {
   transform: scale(1.1); /* Scales up for a subtle pop */
-  box-shadow: 0 0 15px #801f95; /* Larger shadow for depth */
+  box-shadow: 0 0 15px #0072fd; /* Larger shadow for depth */
 }
 
 /* Additional styling for other social icons not specifically classified */
@@ -390,6 +448,7 @@
   display: inline-block !important; /* Inline with block behaviors */
   padding-right: 15px; /* Spacing to the right */
   padding-left: 15px; /* Spacing to the left */
+  pointer-events: auto; /* Enables pointer events for interaction */
 }
 
 /* Specific color styling for icons */
@@ -404,7 +463,7 @@
 
 /* General footer styles, setting the background color, ensuring it sticks to the bottom, and applying padding for spacing. */
 .footer {
-  background-color: rgb(0, 25, 43); /* Dark purple background color */
+  background-color: var(--footer-bg-color);; /* Dark purple background color */
   bottom: 0 !important; /* Anchor to the bottom of its container */
   padding-top: 10px !important; /* Space above footer content */
   padding-bottom: 8px !important; /* Space below footer content */

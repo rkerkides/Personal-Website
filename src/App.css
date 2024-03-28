@@ -1,5 +1,9 @@
 /* Base styling for the application's main container */
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Fill the entire viewport height */
   text-align: center; /* Centers text and, indirectly, any inline content within the application */
 }
 
