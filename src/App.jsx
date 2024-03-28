@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       updateLoad(false);
-    }, 5000); // 5 seconds for the preloader (to ensure tsParticles are loaded)
+    }, 7000); // 7 seconds for the preloader (to ensure tsParticles are loaded)
 
     return () => clearTimeout(timer);
   }, []);
