@@ -11,7 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Techstack from "./Techstack";
 
-function Homepage2() {
+function About() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -114,4 +114,4 @@ function Homepage2() {
     </Container>
   );
 }
-export default Homepage2;
+export default About;

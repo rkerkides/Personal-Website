@@ -2,7 +2,7 @@ import React from 'react';
 import TypingEffect from './TypingEffect';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProfilePic from '../assets/Profile-removebg.png';
-import Homepage2 from './Homepage2';
+import About from './About';
 
 const Homepage = () => {
   return (
@@ -36,7 +36,8 @@ const Homepage = () => {
     <div className='background-shade'>
       <Row>
         <Col>
-        <Homepage2 />
+        {/* About Section */}
+        <About />
         </Col>
       </Row>
     </div>
