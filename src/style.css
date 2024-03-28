@@ -159,7 +159,7 @@ button:focus {
 
 /* Adjustments for the logo size. */
 .logo {
-  width: 2.5em !important;
+  width: 3.5em !important;
 }
 
 /* Styling for navigation links within the navbar. */
@@ -389,6 +389,26 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
+/* Responsive adjustments for tech icons on smaller screens */
+@media (max-width: 767px) {
+  .tech-icons {
+    margin: 10px !important;
+  }
+}
+
+/* Hover effect for tech icons, adding a sense of interaction */
+.tech-icons:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 2.2px solid whitesmoke !important;
+}
+
+/* Styling for the tech icon images, including padding and line height */
+.tech-icon-images {
+  padding: 20px !important;
+  line-height: 1.6 !important;
+}
+
 /* Social links section within the about area, centered for visual balance */
 .home-about-social {
   text-align: center !important; /* Ensures social icons are centered */
@@ -516,3 +536,111 @@ button:focus {
   color: #a588c0 !important; /* Light purple color for a subtle contrast and visual interest */
 }
 
+/* --------- */
+/* Projects */
+/* --------- */
+/* This section styles the overall container of the projects, including its position, padding, and background. */
+.project-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important; /* Uses a CSS variable for background color */
+}
+
+/* Project Card Styles */
+/* These styles apply to individual project cards, setting their padding and ensuring their height is automatic. */
+.project-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  height: auto !important; /* Automatically adjust height based on content */
+}
+
+/* Project Card View Styles */
+/* Styles for the visual presentation of a project card, including shadows, colors, and hover effects. */
+.project-card-view {
+  box-shadow: 0 4px 5px 3px rgba(0, 255, 255, 0.749) !important; /* Soft purple shadow for depth */
+  color: white !important; /* White text color */
+  background-color: transparent !important; /* Transparent background for overlay effects */
+  opacity: 0.9 !important; /* Slightly transparent */
+  transition: all 0.5s ease 0s !important; /* Smooth transition for hover effects */
+  height: 100% !important; /* Full height */
+}
+.project-card-view:hover {
+  transform: scale(1.02) !important; /* Slightly enlarge on hover */
+  overflow: hidden !important; /* Prevent overflow */
+  box-shadow: 0 4px 4px 5px rgba(0, 72, 255, 0.561) !important; /* Darker shadow on hover for depth */
+}
+
+/* Blog Card Styles */
+/* Similar to project cards, but for blogs. Includes padding and automatic height adjustment. */
+.blog-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: auto !important;
+}
+
+/* Blog Card View Styles */
+/* Visual styles for blog cards, including background, shadows, and hover effects. */
+.blog-card-view {
+  background-color: transparent !important;
+  box-shadow: 0 3px 3px 2px rgba(14, 45, 205, 0.459) !important; /* Shadow effect */
+  color: white !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+}
+.blog-card-view:hover {
+  transform: scale(1.02) !important; /* Enlarge on hover */
+  overflow: hidden !important;
+  box-shadow: 0 3px 3px 5px rgba(8, 249, 241, 0.65) !important; /* Darker shadow on hover */
+}
+
+/* Link Styles */
+/* Styles for links within the blog cards, including color and decoration. */
+.blog-link {
+  color: white !important;
+  text-decoration: none !important; /* No underline */
+}
+.blog-link:hover {
+  cursor: pointer !important; /* Pointer cursor on hover */
+}
+
+/* Image and Button Styles */
+/* Additional styles for images and buttons within the cards, including padding, opacity, and border radius. */
+.card-img-top {
+  padding: 20px !important;
+  opacity: 0.8 !important; /* Slightly transparent */
+  border-radius: 10px !important; /* Rounded corners */
+}
+.blog-img {
+  padding: 0px !important;
+  opacity: 0.8 !important;
+  border-radius: 0px !important; /* No rounded corners */
+}
+
+/* Button Styles */
+/* Primary button styles, including colors, borders, and hover effects. */
+.btn-primary {
+  color: #fff !important;
+  background-color: #00eeff !important; /* Purple background */
+  border-color: #00eeff !important; /* Matching border color */
+}
+.btn-primary:hover {
+  color: #fff !important;
+  background-color: #1741bd !important; /* Darker purple on hover */
+  border-color: #05d6e4 !important;
+}
+.btn:focus {
+  outline: none !important; /* Remove focus outline */
+  box-shadow: none !important; /* Remove focus shadow */
+}
+
+/* Heading Styles */
+/* Styles for headings within the project section, setting font size, weight, color, and padding. */
+.project-heading {
+  color: white !important; /* White color for contrast */
+  font-size: 2.3em !important; /* Large font size for emphasis */
+  font-weight: 500 !important; /* Medium font weight */
+  padding-top: 10px !important; /* Top padding */
+}

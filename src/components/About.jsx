@@ -1,15 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../assets/Profile-removebg.png";
+import Logo from "../assets/NoBG.png";
 import Tilt from "react-parallax-tilt";
-import {
-    AiFillGithub,
-    AiFillFacebook,
-    AiFillInstagram,
-  } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import Techstack from "./Techstack";
+import Socials from "./Socials";
 
 function About() {
   return (
@@ -56,58 +50,10 @@ function About() {
               <br />
             </p>
           </Col>
-          <Col md={4} className="myAvatar">
+          <Col md={4} className="Logo">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={Logo} className="img-fluid" alt="logo" />
             </Tilt>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <p>
-              Feel free to <span className="turquoise">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <Link to={"https://github.com/rkerkides"}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </Link>
-              </li>
-              <li className="social-icons">
-                <a
-                    href="https://www.facebook.com/Renosker/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                >
-                    <AiFillFacebook />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/renos-kerkides-05b4891b2/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/renosker/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
           </Col>
         </Row>
       </Container>

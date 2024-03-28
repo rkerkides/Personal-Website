@@ -3,9 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/Logo.png";
-// Import Link from react-router-dom for other navigations
 import { Link as RouterLink } from "react-router-dom";
-// Import Link from react-scroll for smooth scrolling
 import { Link } from "react-scroll";
 import {
   AiOutlineHome,
@@ -45,9 +43,6 @@ function NavBar() {
             updateExpanded(expand ? false : "expanded");
           }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
@@ -82,9 +77,18 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={RouterLink} to="/project" onClick={() => updateExpanded(false)}>
-                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }}/> Projects
-              </Nav.Link>
+              <Link
+                activeClass="active"
+                to="project-section"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={50}
+                onClick={() => updateExpanded(false)}
+                className="nav-item nav-link"
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> Projects
+              </Link>
             </Nav.Item>
 
             <Nav.Item>
