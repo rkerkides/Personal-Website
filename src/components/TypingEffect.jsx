@@ -7,8 +7,11 @@ function TypingEffect() {
       <Typewriter
         options={{
           strings: [
-            "I am an aspiring software developer from Nicosia, Cyprus",
-            "Working towards a Software Development MSc at the University of Glasgow",
+            "Inspiring sof",
+            "Aspiring* software developer",
+            "From Nicosia, Cyprus",
+            "Software Development MSc",
+            "University of Glasgow",
           ],
           autoStart: true,
           loop: true,
