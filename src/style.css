@@ -36,10 +36,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999; /* Highest z-index so it will be on top of everything */
-  background-color: var(--primary-bg-color);
-  background-image: url(./assets/preloader.svg);
-  background-repeat: no-repeat; /* Only one instance of the image */
-  background-position: center; /* Center the image */
+  background-color: var(--particle-fixed-bg); /* Background color */
 }
 
 /* Hide scrollbar for preloader */
@@ -103,7 +100,7 @@ button:focus {
 /* Style for the spans inside the navbar toggler, making them look like a hamburger icon. */
 .navbar-toggler span {
   display: block !important;
-  background-color: var(--navbar-toggler-color) !important; /* Turquoise color for the toggler lines */
+  background-color: #05838b !important; /* Turquoise color for the toggler lines */
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
