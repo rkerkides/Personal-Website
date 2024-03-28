@@ -13,6 +13,7 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Stars from "./components/Stars";
+import { AuroraBackground } from "./components/ui/aurora-background";
 
 const App = () => {
   const [load, updateLoad] = useState(true);
@@ -29,13 +30,17 @@ const App = () => {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <AuroraBackground className="aurora-background" showRadialGradient={true} >
         <Stars />
         <Navbar />
+        <div className="main-content">
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
+        </div>
         <Footer />
+      </AuroraBackground>
       </div>
     </Router>
   )
