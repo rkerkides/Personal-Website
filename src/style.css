@@ -1,0 +1,452 @@
+/* --------- */
+/* Preloader */
+/* --------- */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999; /* Highest z-index so it will be on top of everything */
+  background-color: #100079;
+  background-image: url(./assets/preloader.svg);
+  background-repeat: no-repeat; /* Only one instance of the image */
+  background-position: center; /* Center the image */
+}
+
+/* Hide scrollbar for preloader */
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* --------- */
+/* Scrollbar */
+/* --------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #014eca;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 115, 132, 0.959);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 4, 212, 0.911);
+  border-radius: 12px;
+}
+
+/* ------ */
+/* Navbar */
+/* ------ */
+
+/* Makes the navbar stick to the top of the viewport and applies a blur effect for a frosted glass look. */
+.sticky {
+  background-color: rgb(0, 25, 43) !important; /* Semi-transparent dark background */
+  transition: all 0.3s ease-out 0s !important; /* Smooth transition for any changes */
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important; /* Soft shadow for depth */
+  backdrop-filter: blur(15px) !important; /* Blur effect on the background content */
+}
+
+/* Base styles for the navbar, making it fixed and applying basic styling. */
+.navbar {
+  position: fixed !important; /* Stick to the top */
+  transition: all 0.3s ease-out 0s !important; /* Smooth transition for any changes */
+  padding: 0.3rem 2rem !important; /* Spacing inside the navbar */
+  font-size: 1.2rem !important; /* Text size within the navbar */
+}
+
+/* Styles for the navbar toggler, used for collapsing and expanding the navbar on smaller screens. */
+.navbar-toggler {
+  position: relative !important;
+  background-color: transparent !important; /* Make the background transparent */
+  border-color: transparent !important; /* Make the border transparent */
+}
+
+/* Style for the spans inside the navbar toggler, making them look like a hamburger icon. */
+.navbar-toggler span {
+  display: block !important;
+  background-color: #02d9ff !important; /* Turquoise color for the toggler lines */
+  height: 4px !important;
+  width: 27px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  transform: rotate(0deg) !important;
+  left: 0 !important;
+  opacity: 1 !important;
+}
+
+/* Remove the outline on focus for the toggler and maintain styles when active. */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: 0 !important;
+}
+
+/* Animations for the toggler lines when the navbar is expanded/collapsed. */
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  transition: transform 0.35s ease-in-out !important;
+}
+
+/* Transformations for the top and bottom lines of the toggler to create an 'X' when active. */
+.navbar-toggler:not(.collapsed) span:nth-child(1),
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  position: absolute !important;
+  transform: rotate(135deg) !important; /* Rotate to form 'X' */
+  opacity: 0.9 !important;
+}
+
+/* Hide the middle span when toggler is active. */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  height: 12px !important;
+  visibility: hidden !important;
+  background-color: transparent !important;
+}
+
+/* Responsive adjustments for the navbar on smaller screens. */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1rem 2rem !important; /* Adjust padding */
+    font-size: 1.4rem !important; /* Adjust font size */
+    background-color: #181a27 !important; /* Darker background for better contrast */
+  }
+  .navbar-nav .nav-item a::after {
+    display: none !important; /* Hide the decorative after element */
+  }
+}
+
+/* Styling for the brand logo within the navbar. */
+.navbar-brand {
+  color: rgb(250, 250, 250) !important; /* Light color for visibility */
+}
+
+/* Adjustments for the logo size. */
+.logo {
+  width: 2.5em !important;
+}
+
+/* Styling for navigation links within the navbar. */
+.navbar-nav .nav-link,
+.nav-link {
+  color: white !important; /* Light color for readability */
+  padding-right: 1rem !important; /* Right padding */
+  padding-left: 1rem !important; /* Left padding */
+}
+
+/* Responsive adjustments for nav links on smaller screens. */
+@media (max-width: 767px) {
+  .nav-link {
+    padding: 0.7rem 1rem !important; /* Adjust padding */
+  }
+}
+
+/* Positioning and styling for navbar items. */
+.navbar-nav .nav-item {
+  position: relative;
+  margin-left: 20px; /* Spacing between navbar items */
+}
+
+/* Base styles for navbar item links, including a hover effect. */
+.navbar-nav .nav-item a {
+  font-weight: 400;
+  transition: all 0.3s ease-out 0s; /* Smooth transition for hover effects */
+  position: relative; /* Ensures proper layering of pseudo-elements */
+  z-index: 1; /* Keeps link text above pseudo-elements */
+}
+
+/* Add an animated underline effect on hover */
+.navbar-nav .nav-item a::after {
+  content: ""; /* Necessary for the pseudo-element to display */
+  position: absolute; /* Position relative to the link text */
+  bottom: 1px; /* Position just below the text */
+  left: 0; /* Align with the start of the text */
+  display: block; /* Display as a block element */
+  height: 5px; /* Height of the underline */
+  width: 0; /* Start width at 0 to animate */
+  border-radius: 16px; /* Rounded corners for the underline */
+  background: #02d9ff; /* Turquoise background for the underline */
+  z-index: -1; /* Place the underline below the text */
+  transition: all 0.3s ease-out 0s; /* Smooth transition for the animation */
+}
+
+/* Expand the underline on hover */
+.navbar-nav .nav-item a:hover::after {
+  width: 100%; /* Expand underline to full width */
+}
+
+/* --------- */
+/* Home section */
+/* --------- */
+
+/* Applies a waving animation to elements with the .wave class */
+.wave {
+  animation-name: wave-animation; /* Links to the keyframes animation defined below */
+  animation-duration: 2.1s; /* Duration of each wave animation cycle */
+  animation-iteration-count: infinite; /* The animation repeats indefinitely */
+  transform-origin: 70% 70%; /* Sets the origin of transformation to bottom-left palm for natural wave effect */
+  display: inline-block; /* Allows the animation to apply as elements are inline but need block behaviors */
+}
+
+/* Keyframes for the wave animation, simulating a hand wave */
+@keyframes wave-animation {
+  0%, 60%, 100% {
+    transform: rotate(0deg); /* Starts, pauses, and ends in the original position */
+  }
+  10% {
+    transform: rotate(14deg); /* Waves up */
+  }
+  20% {
+    transform: rotate(-8deg); /* Waves down */
+  }
+  30% {
+    transform: rotate(14deg); /* Waves up again for a lively wave */
+  }
+  40% {
+    transform: rotate(-4deg); /* Slight wave down */
+  }
+  50% {
+    transform: rotate(10deg); /* Back up */
+  }
+  /* This creates a smooth, repeating wave motion */
+}
+
+/* Styles for the particle effect background in the home section */
+#tsparticles {
+  position: fixed !important; /* Ensures particles are behind other content and cover the full screen */
+  background-repeat: no-repeat !important;
+  background-size: cover !important; /* Cover the entire area of the element */
+  width: 100%;
+  height: 100%;
+}
+
+/* Padding at the top of the home header, creating space */
+.home-header {
+  padding-top: 80px !important;
+}
+
+/* The main container for the home section, setting up background image and positioning */
+.home-section {
+  position: relative;
+  z-index: -1; /* Ensures content layers above the background */
+  background-image: var(--image-gradient), url(./Assets/home-bg.jpg); /* A gradient on top of an image for depth */
+  background-position: top center; /* Ensures background image is centered */
+  background-repeat: no-repeat; /* Background image does not repeat */
+  padding-bottom: 30px !important;
+  padding-top: 30px !important; /* Spacing at the top and bottom */
+}
+
+/* Styling for the content within the home section */
+.home-content {
+  padding: 9rem 0 2rem !important; /* Ample padding around content for focus */
+  color: whitesmoke; /* Light color for text to stand out */
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Headings within the home section, including font size adjustments */
+.heading {
+  font-size: 2.4em !important;
+  padding-left: 50px !important; /* Adds spacing to the left for alignment */
+}
+
+.heading-name {
+  font-size: 2.5em !important;
+  padding-left: 45px !important; /* Slightly less padding than .heading for a staggered effect */
+}
+
+/* Specific style for main names, changing the color for emphasis */
+.main-name {
+  color: #cd5ff8; /* Bright purple for visual interest */
+}
+
+/* Styles for a typewriter effect, including colors and font sizes */
+.Typewriter__wrapper,
+.Typewriter__cursor {
+  font-size: 2.2em !important; /* Large font size for visibility */
+  color: #04b9d1 !important; /* Turquoise color for thematic consistency */
+  font-weight: 600 !important; /* Makes text bolder */
+}
+
+.Typewriter__cursor {
+  font-size: 2.4em !important; /* Slightly larger cursor for emphasis */
+  color: #34f5ff !important; /* Different shade of turquoise for contrast */
+}
+
+/* Responsive adjustments for the typewriter effect on smaller screens */
+@media (max-width: 767px) {
+  .Typewriter__wrapper {
+    font-size: 1.4em !important; /* Smaller font size for screen space conservation */
+    font-weight: 500 !important; /* Slightly lighter weight for readability */
+    position: absolute !important; /* Positioning to handle mobile layouts */
+  }
+  .Typewriter__cursor {
+    display: none !important; /* Hide cursor on small screens for clarity */
+  }
+}
+
+/* Styles for avatar positioning and spacing within the home section */
+.myAvtar {
+  justify-content: center !important; /* Center avatar horizontally */
+  padding-top: 9em !important; /* Space from the top */
+}
+
+@media (max-width: 767px) {
+  .myAvtar {
+    padding-top: 2em !important; /* Adjust padding top for smaller screens */
+    padding-bottom: 2em !important; /* Adds bottom padding for balance */
+  }
+}
+
+/* General styling for the about section within the home page */
+.home-about-section {
+  position: relative;
+  padding-bottom: 70px !important; /* Spacing at the bottom */
+  padding-top: 70px !important; /* Spacing at the top */
+}
+
+/* Styles for the about section's description, ensuring readability and focus */
+.home-about-description {
+  color: white !important; /* Text color for contrast */
+  padding-top: 100px !important; /* Top spacing for separation from other content */
+  padding-bottom: 20px !important; /* Bottom spacing for grouping text */
+  text-align: center; /* Centers the text for focus */
+}
+
+/* Body text within the about section, styled for readability */
+.home-about-body {
+  padding-top: 50px; /* Space above the body text */
+  font-size: 1.2em !important; /* Slightly larger font size for readability */
+  text-align: left; /* Align text to the left for a consistent reading flow */
+}
+
+/* Social links section within the about area, centered for visual balance */
+.home-about-social {
+  text-align: center !important; /* Ensures social icons are centered */
+  padding-top: 25px; /* Spacing above the social icons */
+  color: white !important; /* White color for icons for contrast */
+}
+
+/* Container for social links, ensuring they are centered and properly spaced */
+.home-about-social-links {
+  justify-content: center !important; /* Centers social links horizontally */
+  padding-top: 15px !important; /* Spacing above the links */
+  display: inline-block !important; /* Allows for inline layout with block behaviors */
+  position: relative !important; /* Establishes a stacking context */
+  padding-inline-start: 0 !important; /* Removes default padding */
+}
+
+/* Individual social icon styling, including size, color, and interaction effects */
+.home-social-icons {
+  position: relative !important; /* Needed for positioning effects */
+  display: inline-block !important; /* Allows icons to sit side by side */
+  width: 40px !important; /* Fixed width for icons */
+  height: 40px !important; /* Fixed height for icons */
+  text-align: center !important; /* Centers the icon within the circle */
+  font-size: 1.2em !important; /* Size of the icon */
+  line-height: 2em !important; /* Centers the icon vertically */
+  background: rgba(255, 255, 255, 0.972) !important; /* White background with slight transparency */
+  border-radius: 50% !important; /* Rounds the edges into a circle */
+  transition: 0.5s !important; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for social icons, giving a sense of interaction */
+.home-social-icons:hover {
+  color: #87209e; /* Changes icon color on hover */
+  box-shadow: 0 0 5px #87209e; /* Shadow for depth */
+  text-shadow: 0 0 2px #87209e; /* Text shadow for emphasis */
+}
+
+/* Background effect for icons, adding depth and visual interest */
+.home-social-icons::before {
+  content: ""; /* Necessary for pseudo-elements */
+  position: absolute; /* Positions relative to the icon */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the icon */
+  height: 100%; /* Full height of the icon */
+  border-radius: 50%; /* Maintains circular shape */
+  background: #68187a; /* Purple background for thematic consistency */
+  transition: 0.5s; /* Smooth transition for hover effects */
+  transform: scale(0.9); /* Slightly scaled down for a popping effect on hover */
+  z-index: -1; /* Sits behind the icon */
+}
+
+/* Enhances the hover effect, making the background and shadow more pronounced */
+.home-social-icons:hover::before {
+  transform: scale(1.1); /* Scales up for a subtle pop */
+  box-shadow: 0 0 15px #801f95; /* Larger shadow for depth */
+}
+
+/* Additional styling for other social icons not specifically classified */
+.social-icons {
+  display: inline-block !important; /* Inline with block behaviors */
+  padding-right: 15px; /* Spacing to the right */
+  padding-left: 15px; /* Spacing to the left */
+}
+
+/* Specific color styling for icons */
+.icon-colour {
+  color: #00c3ff !important; /* Turquoise color for icons */
+}
+  
+  
+/* ------ */
+/* Footer */
+/* ------ */
+
+/* General footer styles, setting the background color, ensuring it sticks to the bottom, and applying padding for spacing. */
+.footer {
+  background-color: rgb(0, 25, 43); /* Dark purple background color */
+  bottom: 0 !important; /* Anchor to the bottom of its container */
+  padding-top: 10px !important; /* Space above footer content */
+  padding-bottom: 8px !important; /* Space below footer content */
+  backdrop-filter: blur(15px) !important; /* Blur effect on the background content */
+}
+
+/* Style for the copyright section of the footer, centering the text. */
+.footer-copywright {
+  text-align: center !important; /* Ensures text is always centered, important for responsiveness */
+}
+
+/* Style for the body of the footer containing links or info, centered. */
+.footer-body {
+  z-index: 1; /* Ensures the footer content is above other page elements if they overlap */
+  text-align: center !important; /* Centers the content, making it consistent and visually balanced */
+}
+
+/* Responsive adjustments for the footer on smaller screens. These ensure that the footer's content remains centered, no matter the screen size. */
+@media (max-width: 767px) {
+  .footer-copywright,
+  .footer-body {
+    text-align: center !important; /* Center aligns text for smaller screens, improving readability */
+  }
+}
+
+/* Style for headings within the footer, setting font size, color, and margin for visual hierarchy and spacing. */
+.footer h3 {
+  font-size: 1em; /* Sets a standard size for heading text within the footer */
+  color: white !important; /* Ensures high contrast of text against the dark background */
+  margin-top: 0.5em !important; /* Top margin for spacing */
+  margin-bottom: 0.5em !important; /* Bottom margin for spacing */
+}
+
+/* Style for icons container in the footer, adjusting margins and padding for layout and spacing. */
+.footer-icons {
+  margin-top: 0.5em !important; /* Top margin for spacing above the icons */
+  margin-bottom: 0.5em !important; /* Bottom margin for spacing below the icons */
+  padding: 0 !important; /* Removes padding to ensure alignment and spacing are consistent */
+}
+
+/* Style for blockquote footers within the footer, adjusting the text color for distinction and readability. */
+.blockquote-footer {
+  color: #a588c0 !important; /* Light purple color for a subtle contrast and visual interest */
+}
+

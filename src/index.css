@@ -1,0 +1,23 @@
+/* Imports the foundational styles from Tailwind CSS, which is a utility-first CSS framework. */
+@import 'tailwindcss/base';
+
+/* Imports component classes from Tailwind CSS, enabling the use of pre-defined classes for UI components. */
+@import 'tailwindcss/components';
+
+/* Imports utility classes from Tailwind CSS, providing a wide range of utility classes for designing the layout and look of the webpage. */
+@import 'tailwindcss/utilities';
+
+/* Imports the 'Raleway' font from Google Fonts, specifying a weight of 500 (Medium). The 'display=swap' parameter ensures text remains visible during font loading. */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+/* Custom styles for the body of the webpage. */
+body {
+    color: white; /* Sets the text color to white for all text within the body. */
+    margin: 0; /* Removes the default margin to ensure the content stretches to the edges of the viewport. */
+    font-family: "Raleway", serif; /* Sets 'Raleway' as the primary font, with a generic serif font as a fallback. */
+    -webkit-font-smoothing: antialiased; /* Improves the legibility of fonts on macOS and iOS by antialiasing. */
+    -moz-osx-font-smoothing: grayscale; /* Applies grayscale antialiasing to improve font rendering on Firefox for macOS. */
+    background-image: linear-gradient(to top, #3e6680ff, rgb(0, 0, 0)); /* Creates a linear gradient background from dark blue to black, enhancing the visual appeal. */
+}
+
+/* The code effectively leverages Tailwind CSS for utility-first styling, enhances typography with Google Fonts, and applies custom visual styling for a cohesive and visually appealing design. */

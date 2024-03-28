@@ -1,0 +1,49 @@
+/* Base styling for the application's main container */
+.App {
+  text-align: center; /* Centers text and, indirectly, any inline content within the application */
+}
+
+/* Styling for the application's logo */
+.App-logo {
+  height: 40vmin; /* Sets the height relative to the viewport's smaller dimension for responsive design */
+  pointer-events: none; /* Disables pointer events (e.g., mouse click, hover) on the logo */
+}
+
+/* Animation for the App logo for users without the 'prefers-reduced-motion' setting enabled */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Applies a rotating animation to the logo */
+  }
+}
+
+/* Keyframes for the rotating logo animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Starting state of the animation */
+  }
+  to {
+    transform: rotate(360deg); /* Ending state of the animation, completing a full circle */
+  }
+  /* This creates a continuous rotating effect for the logo */
+}
+
+/* Styling for the application's header */
+.App-header {
+  background-color: #282c34; /* Dark background color for the header */
+  min-height: 100vh; /* Minimum height to fill the viewport vertically */
+  display: flex; /* Enables flexbox layout, providing a flexible and efficient way to layout, align, and distribute space among items */
+  flex-direction: column; /* Stacks flex items vertically */
+  align-items: center; /* Centers flex items on the cross-axis (horizontally) */
+  justify-content: center; /* Centers flex items on the main-axis (vertically), effectively centering content within the header */
+  font-size: calc(10px + 2vmin); /* Responsive font size, adapting to the viewport size */
+  color: white; /* Text color for high contrast against the dark background */
+}
+
+/* Styling for links within the application */
+.App-link {
+  color: #61dafb; /* Light blue color for links, enhancing visual appeal and readability */
+}
+
+/* The CSS collectively organizes the layout of the application, focusing on a clean and responsive design.
+The use of Flexbox for the header allows for a flexible layout that adapts to various screen sizes and orientations.
+The animation and responsive units (e.g., vmin, vh) ensure that the application's visual elements are dynamic and scalable across different devices. */
