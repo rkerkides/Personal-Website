@@ -40,10 +40,10 @@ function Homepage2() {
                 (INSERT ICONS OF LANGUAGES AND FRAMEWORKS HERE)
               <br />
               <br />
-              I have always been fascinated by anything tech-related, and I am always looking to learn!
+              I'm naturally curious and always looking to learn more about stuff; tech-related or otherwise!
               <br />
               <br />
-              My current focus is on
+              Currently fascinated by, and trying to learn more about
               <i>
                 <b className="turquoise"> Web Development, Artificial Intelligence </b> and
                 {" "}
@@ -63,7 +63,6 @@ function Homepage2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
             <p>
               Feel free to <span className="turquoise">connect </span>with me
             </p>
