@@ -14,6 +14,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Stars from "./components/Stars";
 import { AuroraBackground } from "./components/ui/aurora-background";
+import Homepage2 from "./components/Homepage2";
 
 const App = () => {
   const [load, updateLoad] = useState(true);

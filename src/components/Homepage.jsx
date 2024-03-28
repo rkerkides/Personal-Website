@@ -1,8 +1,5 @@
 import React from 'react';
 import TypingEffect from './TypingEffect';
-import Stars from './Stars';
-import { WavyBackground } from './ui/wavy-background';
-import { AuroraBackground } from './ui/aurora-background';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProfilePic from '../assets/Profile-removebg.png';
 import Homepage2 from './Homepage2';

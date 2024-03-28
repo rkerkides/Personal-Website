@@ -24,13 +24,6 @@ button:focus {
   box-shadow: none !important;
 }
 
-.aurora-background {
-  pointer-events: auto; /* Enable pointer events on the AuroraBackground */
-}
-
-.aurora-background * {
-  pointer-events: auto; /* Explicitly enable pointer events for all descendants */
-}
 
 
 /* --------- */
@@ -257,7 +250,6 @@ button:focus {
   position: fixed !important; /* Ensures particles are behind other content and cover the full screen */
   background-repeat: no-repeat !important;
   background-size: cover !important; /* Cover the entire area of the element */
-  pointer-events: none; /* Allows clicking through the particles to elements below */
   width: 100%;
   height: 100%;
 }
@@ -269,7 +261,6 @@ button:focus {
 
 /* The main container for the home section, setting up background image and positioning */
 .home-section {
-  position: relative;
   z-index: -1; /* Ensures content layers above the background */
   background-image: var(--image-gradient), var(--home-bg-image); /* A gradient on top of an image for depth */
   background-position: top center; /* Ensures background image is centered */

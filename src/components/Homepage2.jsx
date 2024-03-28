@@ -27,8 +27,7 @@ function Homepage2() {
               <i>
                 <b className="turquoise"> MSc in Software Development from the University of Glasgow </b>
               </i>
-              ,
-              I try to bring a unique perspective to tech, blending human insights 
+              , I try to bring a unique perspective to tech, blending human insights 
               with cutting-edge programming!
               <br />
               <br />I feel most at home when programming in
