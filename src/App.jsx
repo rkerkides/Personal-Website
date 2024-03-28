@@ -37,9 +37,6 @@ const App = () => {
         <div className="main-content">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={Homepage} />
-          <Route path="/projects" element={Homepage} />
-          <Route path="/resume" element={Homepage} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         </div>

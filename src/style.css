@@ -10,8 +10,8 @@
   --underline-color: #02d9ff;
   --particle-fixed-bg: #181a27;
   --social-icon-bg: rgba(255, 255, 255, 0.972);
-  --social-icon-hover-color: #87209e;
-  --social-icon-bg-hover: #68187a;
+  --social-icon-hover-color: #1ee5ff;
+  --social-icon-bg-hover: #00195c;
   --footer-bg-color: rgb(0, 25, 43);
   --icon-color: #00c3ff;
 }
@@ -317,13 +317,13 @@ button:focus {
 }
 
 /* Styles for avatar positioning and spacing within the home section */
-.myAvatar {
+.Logo {
   justify-content: center !important; /* Center avatar horizontally */
   padding-top: 9em !important; /* Space from the top */
 }
 
 @media (max-width: 767px) {
-  .myAvatar {
+  .Logo {
     padding-top: 2em !important; /* Adjust padding top for smaller screens */
     padding-bottom: 2em !important; /* Adds bottom padding for balance */
   }
@@ -364,6 +364,7 @@ button:focus {
 /* Different shade for the background starting just below the line */
 .background-shade {
   background-color: var(--footer-bg-color);
+  border-radius: 5%;
 }
 
 /* Body text within the about section, styled for readability */
@@ -432,21 +433,21 @@ button:focus {
 .home-social-icons {
   position: relative !important; /* Needed for positioning effects */
   display: inline-block !important; /* Allows icons to sit side by side */
-  width: 40px !important; /* Fixed width for icons */
+  width: px !important; /* Fixed width for icons */
   height: 40px !important; /* Fixed height for icons */
   text-align: center !important; /* Centers the icon within the circle */
-  font-size: 1.2em !important; /* Size of the icon */
-  line-height: 2em !important; /* Centers the icon vertically */
-  background: rgba(255, 255, 255, 0.5) !important; /* White background with slight transparency */
-  border-radius: 50% !important; /* Rounds the edges into a circle */
+  font-size: 2.2em !important; /* Size of the icon */
+  line-height: 3em !important; /* Centers the icon vertically */
+  background: #05838b !important; /* White background with slight transparency */
+  border-radius: 40% !important; /* Rounds the edges into a circle */
   transition: 0.5s !important; /* Smooth transition for hover effects */
 }
 
 /* Hover effect for social icons, giving a sense of interaction */
 .home-social-icons:hover {
-  color: #87209e; /* Changes icon color on hover */
-  box-shadow: 0 0 5px #87209e; /* Shadow for depth */
-  text-shadow: 0 0 2px #87209e; /* Text shadow for emphasis */
+  color: #207f9e; /* Changes icon color on hover */
+  box-shadow: 0 0 5px #0099ff; /* Shadow for depth */
+  text-shadow: 0 0 2px #0099ff; /* Text shadow for emphasis */
 }
 
 /* Background effect for icons, adding depth and visual interest */
@@ -458,9 +459,8 @@ button:focus {
   width: 100%; /* Full width of the icon */
   height: 100%; /* Full height of the icon */
   border-radius: 50%; /* Maintains circular shape */
-  background: var(--primary-bg-color); /* Blue background for thematic consistency */
+  background: var(--navbar-toggler-color); /* Blue background for thematic consistency */
   transition: 0.5s; /* Smooth transition for hover effects */
-  transform: scale(0.9); /* Slightly scaled down for a popping effect on hover */
   z-index: -1; /* Sits behind the icon */
 }
 
@@ -480,7 +480,7 @@ button:focus {
 
 /* Specific color styling for icons */
 .icon-colour {
-  color: #00c3ff !important; /* Turquoise color for icons */
+  color: #ffffff !important; /* Turquoise color for icons */
 }
   
   
@@ -531,10 +531,6 @@ button:focus {
   padding: 0 !important; /* Removes padding to ensure alignment and spacing are consistent */
 }
 
-/* Style for blockquote footers within the footer, adjusting the text color for distinction and readability. */
-.blockquote-footer {
-  color: #a588c0 !important; /* Light purple color for a subtle contrast and visual interest */
-}
 
 /* --------- */
 /* Projects */
@@ -623,7 +619,7 @@ button:focus {
 /* Primary button styles, including colors, borders, and hover effects. */
 .btn-primary {
   color: #fff !important;
-  background-color: #00eeff !important; /* Purple background */
+  background-color: #05838b !important; /* Purple background */
   border-color: #00eeff !important; /* Matching border color */
 }
 .btn-primary:hover {

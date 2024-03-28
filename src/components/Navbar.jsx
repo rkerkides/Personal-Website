@@ -87,15 +87,25 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
                 className="nav-item nav-link"
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Projects
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
               </Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={RouterLink} to="/resume" onClick={() => updateExpanded(false)}>
+              <Link
+                activeClass="active"
+                to="resume"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={50}
+                onClick={() => updateExpanded(false)}
+                className="nav-item nav-link"
+              >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
+              </Link>
             </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
