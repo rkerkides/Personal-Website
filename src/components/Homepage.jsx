@@ -13,7 +13,7 @@ const Homepage = () => {
           <h1 className="heading-name">
             HI, MY NAME IS<strong className="main-name"> RENOS!</strong>
           </h1>
-          <div style={{ padding: 50, textAlign: "left" }}>
+          <div style={{ padding: 50, textAlign: "left", whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
             <TypingEffect />
           </div>
         </Col>

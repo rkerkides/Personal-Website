@@ -14,7 +14,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Stars from "./components/Stars";
 import { AuroraBackground } from "./components/ui/aurora-background";
-import Homepage2 from "./components/Homepage2";
+
 
 const App = () => {
   const [load, updateLoad] = useState(true);
@@ -37,6 +37,9 @@ const App = () => {
         <div className="main-content">
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={Homepage} />
+          <Route path="/projects" element={Homepage} />
+          <Route path="/resume" element={Homepage} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         </div>
