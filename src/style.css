@@ -317,13 +317,13 @@ button:focus {
 }
 
 /* Styles for avatar positioning and spacing within the home section */
-.myAvtar {
+.myAvatar {
   justify-content: center !important; /* Center avatar horizontally */
   padding-top: 9em !important; /* Space from the top */
 }
 
 @media (max-width: 767px) {
-  .myAvtar {
+  .myAvatar {
     padding-top: 2em !important; /* Adjust padding top for smaller screens */
     padding-bottom: 2em !important; /* Adds bottom padding for balance */
   }
@@ -371,6 +371,22 @@ button:focus {
   padding-top: 50px; /* Space above the body text */
   font-size: 1.2em !important; /* Slightly larger font size for readability */
   text-align: left; /* Align text to the left for a consistent reading flow */
+}
+
+/* Styling for the tech icons section, including size, spacing, and visual effects */
+.tech-icons {
+  font-size: 4.5em !important;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid rgba(0, 187, 255, 0.637) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  display: table !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
 }
 
 /* Social links section within the about area, centered for visual balance */

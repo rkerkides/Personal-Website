@@ -9,6 +9,7 @@ import {
   } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Techstack from "./Techstack";
 
 function Homepage2() {
   return (
@@ -37,9 +38,9 @@ function Homepage2() {
               but I am comfortable with a wide range of languages and frameworks:
               <br />
               <br />
-                (INSERT ICONS OF LANGUAGES AND FRAMEWORKS HERE)
-              <br />
-              <br />
+            </p>
+            <Techstack />
+            <p className="home-about-body">
               I'm naturally curious and always looking to learn more about stuff; tech-related or otherwise!
               <br />
               <br />
@@ -55,7 +56,7 @@ function Homepage2() {
               <br />
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className="myAvatar">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
