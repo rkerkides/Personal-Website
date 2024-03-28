@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/Logo.png";
-import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import {
   AiOutlineHome,
@@ -43,6 +42,9 @@ function NavBar() {
             updateExpanded(expand ? false : "expanded");
           }}
         >
+          <span></span>
+          <span></span>
+          <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
