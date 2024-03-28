@@ -3,6 +3,8 @@ import TypingEffect from './TypingEffect';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProfilePic from '../assets/Profile-removebg.png';
 import About from './About';
+import Projects from './Projects';
+import Socials from './Socials';
 
 const Homepage = () => {
   return (
@@ -38,6 +40,18 @@ const Homepage = () => {
         <Col>
         {/* About Section */}
         <About />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        {/* Projects Section */}
+        <Projects />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+        {/* Contact Section */}
+        <Socials />
         </Col>
       </Row>
     </div>

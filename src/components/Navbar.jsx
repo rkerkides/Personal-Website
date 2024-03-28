@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../assets/favicon.ico";
+import logo from "../assets/Logo.png";
 // Import Link from react-router-dom for other navigations
 import { Link as RouterLink } from "react-router-dom";
 // Import Link from react-scroll for smooth scrolling
