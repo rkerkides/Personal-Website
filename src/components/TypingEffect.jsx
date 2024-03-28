@@ -7,8 +7,8 @@ function TypingEffect() {
       <Typewriter
         options={{
           strings: [
-            "Inspiring sof",
-            "Aspiring* software developer",
+            "Inspiring",
+            "Aspiring <span style='color: white;'>*</span>  software developer",
             "From Nicosia, Cyprus",
             "Software Development MSc",
             "University of Glasgow",
