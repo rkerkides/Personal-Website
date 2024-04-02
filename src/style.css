@@ -159,12 +159,13 @@ button:focus {
   width: 3.5em !important;
 }
 
-/* Styling for navigation links within the navbar. */
+/* Styles for navigation links within the navbar. */
 .navbar-nav .nav-link,
-.nav-link {
-  color: white !important; /* Light color for readability */
-  padding-right: 1rem !important; /* Right padding */
-  padding-left: 1rem !important; /* Left padding */
+.navbar-nav .nav-item a {
+  color: white !important; /* Ensures readability against the navbar background */
+  padding-right: 1rem !important; /* Spacing to the right of each nav item */
+  padding-left: 1rem !important; /* Spacing to the left of each nav item */
+  cursor: pointer; /* Ensures the cursor changes to a pointer to indicate clickability */
 }
 
 /* Responsive adjustments for nav links on smaller screens. */
