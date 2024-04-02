@@ -12,7 +12,6 @@ import {
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Stars from "./components/Stars";
 import { AuroraBackground } from "./components/ui/aurora-background";
 
 
@@ -22,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       updateLoad(false);
-    }, 7000); // 7 seconds for the preloader (to ensure tsParticles are loaded)
+    }, 5000); // 5 seconds for the preloader
 
     return () => clearTimeout(timer);
   }, []);
