@@ -1,7 +1,7 @@
 import React from 'react';
 import TypingEffect from './TypingEffect';
 import { Container, Row, Col } from 'react-bootstrap';
-import ProfilePic from '../assets/Profile-removebg.png';
+import ProfilePic from '../assets/Profile.webp';
 import About from './About';
 import Projects from './Projects';
 import Socials from './Socials';

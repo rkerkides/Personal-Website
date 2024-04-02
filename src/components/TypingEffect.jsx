@@ -8,7 +8,7 @@ function TypingEffect() {
         options={{
           strings: [
             "Inspiring",
-            "Aspiring <span style='color: white;'>*</span>  software developer",
+            "Aspiring<span style='color: white;'>*</span> software dev",
             "From Nicosia, Cyprus",
             "Software Development MSc",
             "University of Glasgow",

@@ -13,7 +13,7 @@ function Preloader(props) {
     <MultiStepLoader
       loadingStates={loadingMessages} // Pass the loading states messages
       loading={props.load}           // Use the prop to control the loading state
-      duration={1200}                // Set the duration to 1200ms
+      duration={1700}                // Set the duration to 1700ms
       loop={false}                    // Disable looping of the loading states
     />
   </div>;

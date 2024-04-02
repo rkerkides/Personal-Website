@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Logo from "../assets/NoBG.png";
+import Logo from "../assets/LogoPlaque.webp";
 import Tilt from "react-parallax-tilt";
 import Techstack from "./Techstack";
-import Socials from "./Socials";
 
 function About() {
   return (

@@ -32,7 +32,6 @@ const App = () => {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
       <AuroraBackground className="aurora-background" showRadialGradient={true} >
-
         <Navbar />
         <div className="main-content">
         <Routes>
