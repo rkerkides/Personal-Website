@@ -8,6 +8,7 @@ import Socials from './Socials';
 import { Button } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
 import cv from '../assets/RenosKerkidesCV.pdf';
+import { px } from 'framer-motion';
 
 const Homepage = () => {
   return (
@@ -28,8 +29,7 @@ const Homepage = () => {
               <img
                 src={ProfilePic}
                 alt="Profile Picture"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                className="img-fluid profile-picture"
               />
               {/* Line below the image */}
               <hr className="image-divider" />

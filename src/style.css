@@ -358,6 +358,25 @@ button:focus {
   right: 0;
 }
 
+/* Styling for the profile picture, ensuring it maintains its aspect ratio */
+.profile-picture {
+  max-height: 450px;
+  width: auto; /* Ensure the width is auto to maintain the aspect ratio */
+  height: auto; /* Ensure the height is auto to maintain the aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .profile-picture {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-picture {
+    max-height: 200px;
+  }
+}
+
 /* Different shade for the background starting just below the line */
 .background-shade {
   background-color: var(--footer-bg-color);
