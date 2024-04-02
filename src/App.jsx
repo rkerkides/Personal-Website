@@ -16,20 +16,10 @@ import { AuroraBackground } from "./components/ui/aurora-background";
 
 
 const App = () => {
-  const [load, updateLoad] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      updateLoad(false);
-    }, 5000); // 5 seconds for the preloader
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <div className="App" id={"scroll"}>
       <AuroraBackground className="aurora-background" showRadialGradient={true} >
         <Navbar />
         <div className="main-content">
