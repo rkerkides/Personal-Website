@@ -2,12 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/Logo.png" />
+    <link rel="icon" type="image/webp" href="./src/assets/Logo.webp" />
+    <link rel="preload" as="image" href="/assets/Profile.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Renos Kerkides - Portfolio showcasing projects, skills, and professional experience." />
+    <meta property="og:title" content="Renos Kerkides - Software Developer" />
+    <meta property="og:description" content="Showcasing my software development projects and professional journey." />
+    <meta property="og:image" content="https://renos-kerkides.netlify.app/assets/Profile.webp" />
+    <meta property="og:url" content="https://renos-kerkides.netlify.app/" />
+    <link rel="canonical" href="https://renos-kerkides.netlify.app/" />
     <title>Renos Kerkides</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Renos Kerkides",
+        "url": "https://renos-kerkides.netlify.app/",
+        "sameAs": [
+          "https://www.linkedin.com/in/renos-kerkides",
+          "https://github.com/rkerkides",
+          "https://www.facebook.com/Renosker/"
+        ]
+      }
+      </script>      
   </body>
 </html>
