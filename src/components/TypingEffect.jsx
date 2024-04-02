@@ -36,7 +36,7 @@ function TypingEffect() {
           options={{
             strings: [
               "Inspiring",
-              "Aspiring<span style='color: #FFF;'>*</span> software dev",
+              "Aspiring<span style='color: #02d9ff;'>*</span> software dev",
               "From Nicosia, Cyprus",
               "Software Development MSc",
               "University of Glasgow",

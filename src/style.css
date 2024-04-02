@@ -286,14 +286,14 @@ button:focus {
 
 /* Specific style for main names, changing the color for emphasis */
 .main-name {
-  color: var(--icon-color); /* Bright purple for visual interest */
+  color: var(--navbar-toggler-color); /* Bright turquoise for visual interest */
 }
 
 /* Styles for a typewriter effect, including colors and font sizes */
 .Typewriter__wrapper,
 .Typewriter__cursor {
   font-size: 2.2em !important; /* Large font size for visibility */
-  color: #04b9d1 !important; /* Turquoise color for thematic consistency */
+  color: #ffffff !important; /* White color for thematic consistency */
   font-weight: 600 !important; /* Makes text bolder */
 }
 
@@ -455,7 +455,7 @@ button:focus {
   text-align: center !important; /* Centers the icon within the circle */
   font-size: 2.2em !important; /* Size of the icon */
   line-height: 3em !important; /* Centers the icon vertically */
-  background: #05838b !important; /* White background with slight transparency */
+  background: var(--navbar-toggler-color) !important; /* White background with slight transparency */
   border-radius: 40% !important; /* Rounds the edges into a circle */
   transition: 0.5s !important; /* Smooth transition for hover effects */
 }
@@ -507,7 +507,7 @@ button:focus {
 
 /* General footer styles, setting the background color, ensuring it sticks to the bottom, and applying padding for spacing. */
 .footer {
-  background-color: var(--footer-bg-color);; /* Dark purple background color */
+  background-color: var(--footer-bg-color);; /* Dark blue background color */
   bottom: 0 !important; /* Anchor to the bottom of its container */
   padding-top: 10px !important; /* Space above footer content */
   padding-bottom: 8px !important; /* Space below footer content */
@@ -571,7 +571,7 @@ button:focus {
 /* Project Card View Styles */
 /* Styles for the visual presentation of a project card, including shadows, colors, and hover effects. */
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(0, 255, 255, 0.749) !important; /* Soft purple shadow for depth */
+  box-shadow: 0 4px 5px 3px rgba(0, 255, 255, 0.749) !important; /* Soft turquoise shadow for depth */
   color: white !important; /* White text color */
   background-color: transparent !important; /* Transparent background for overlay effects */
   opacity: 0.9 !important; /* Slightly transparent */
@@ -581,42 +581,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important; /* Slightly enlarge on hover */
   overflow: hidden !important; /* Prevent overflow */
-  box-shadow: 0 4px 4px 5px rgba(0, 72, 255, 0.561) !important; /* Darker shadow on hover for depth */
-}
-
-/* Blog Card Styles */
-/* Similar to project cards, but for blogs. Includes padding and automatic height adjustment. */
-.blog-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
-}
-
-/* Blog Card View Styles */
-/* Visual styles for blog cards, including background, shadows, and hover effects. */
-.blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(14, 45, 205, 0.459) !important; /* Shadow effect */
-  color: white !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
-}
-.blog-card-view:hover {
-  transform: scale(1.02) !important; /* Enlarge on hover */
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(8, 249, 241, 0.65) !important; /* Darker shadow on hover */
-}
-
-/* Link Styles */
-/* Styles for links within the blog cards, including color and decoration. */
-.blog-link {
-  color: white !important;
-  text-decoration: none !important; /* No underline */
-}
-.blog-link:hover {
-  cursor: pointer !important; /* Pointer cursor on hover */
+  box-shadow: 0 4px 4px 5px #025056 !important; /* Darker shadow on hover for depth */
 }
 
 /* Image and Button Styles */
@@ -636,12 +601,12 @@ button:focus {
 /* Primary button styles, including colors, borders, and hover effects. */
 .btn-primary {
   color: #fff !important;
-  background-color: #05838b !important; /* Purple background */
+  background-color: var(--navbar-toggler-color) !important; /* Turquoise background */
   border-color: #00eeff !important; /* Matching border color */
 }
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #1741bd !important; /* Darker purple on hover */
+  background-color: #05838b !important; /* Darker blue on hover */
   border-color: #05d6e4 !important;
 }
 .btn:focus {
