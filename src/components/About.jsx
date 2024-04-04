@@ -16,13 +16,13 @@ function About() {
             <p className="home-about-body">
               With both a 
               <i>
-                <b className="turquoise"> BSc in Business Psychology from Loughborough University </b>
+                <b className="turquoise"> BSc </b> in <b className="turquoise"> Business Psychology </b>from <b className="turquoise"> Loughborough University </b>
               </i>, as well as an 
               <i>
-                <b className="turquoise"> MSc in Software Development from the University of Glasgow </b>
+                <b className="turquoise"> MSc </b> in <b className="turquoise"> Software Development </b>from the <b className="turquoise"> University of Glasgow </b>
               </i>
-              , I try to bring a unique perspective to tech, blending human insights 
-              with cutting-edge programming!
+              , I try to bring a unique perspective to tech, blending <b className="turquoise"> human insights </b> 
+              with <b className="turquoise">cutting-edge programming</b>!
               <br />
               <br />I feel most at home when programming in
               <i>

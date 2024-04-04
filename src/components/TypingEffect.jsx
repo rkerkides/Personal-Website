@@ -35,9 +35,9 @@ function TypingEffect() {
         <Typewriter
           options={{
             strings: [
-              "Inspiring",
-              "Aspiring<span style='color: #02d9ff;'>*</span> software dev",
+              "Software Engineer",
               "From Nicosia, Cyprus",
+              "Business Psychology BSc",
               "Software Development MSc",
               "University of Glasgow",
             ],
