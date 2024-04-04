@@ -37,19 +37,22 @@ const Homepage = () => {
       <br/>
       <div className='resume'>
         {/* Download CV Button */}
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row className="justify-content-center position-relative">
+          <Col xs={8} sm={6} md={5} lg={4} xl={3}>
           <Button
             variant="primary"
             href={cv}
             target="_blank"
-            style={{ maxWidth: "300px" }}
+            className="w-100 text-center"
           >
-            <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            <span className="d-flex align-items-center justify-content-center gap-1">
+              <AiOutlineDownload />
+              Download CV
             </span>
           </Button>
-        </Row>
+        </Col>
+      </Row>
+
       </div>
       
         <br/>
