@@ -158,6 +158,8 @@ button:focus {
   display: flex; /* Use Flexbox for layout */
   align-items: center; /* Center items vertically */
   gap: 8px; /* Space between icon and text */
+  margin-bottom: 10px;
+  margin-left: 100px;
 }
 
 /* Navbar Item Positioning */
@@ -417,125 +419,9 @@ button:focus {
   line-height: 1.6 !important;
 }
 
-/* Social links section within the about area, centered for visual balance */
-.home-about-social {
-  text-align: center !important; /* Ensures social icons are centered */
-  padding-top: 25px; /* Spacing above the social icons */
-  color: white !important; /* White color for icons for contrast */
-  z-index: 10; /* Higher than the tsparticles */
-  position: relative; /* Needed for z-index to take effect */
-}
-
-/* Container for social links, ensuring they are centered and properly spaced */
-.home-about-social-links {
-  justify-content: center !important; /* Centers social links horizontally */
-  padding-top: 15px !important; /* Spacing above the links */
-  display: inline-block !important; /* Allows for inline layout with block behaviors */
-  position: relative !important; /* Establishes a stacking context */
-  padding-inline-start: 0 !important; /* Removes default padding */
-  pointer-events: auto; /* Enables pointer events for interaction */
-}
-
-/* Individual social icon styling, including size, color, and interaction effects */
-.home-social-icons {
-  position: relative !important; /* Needed for positioning effects */
-  display: inline-block !important; /* Allows icons to sit side by side */
-  width: px !important; /* Fixed width for icons */
-  height: 40px !important; /* Fixed height for icons */
-  text-align: center !important; /* Centers the icon within the circle */
-  font-size: 2.2em !important; /* Size of the icon */
-  line-height: 3em !important; /* Centers the icon vertically */
-  background: #07a4d3 !important; /* White background with slight transparency */
-  border-radius: 40% !important; /* Rounds the edges into a circle */
-  transition: 0.5s !important; /* Smooth transition for hover effects */
-}
-
-/* Hover effect for social icons, giving a sense of interaction */
-.home-social-icons:hover {
-  color: #207f9e; /* Changes icon color on hover */
-  box-shadow: 0 0 5px #0099ff; /* Shadow for depth */
-  text-shadow: 0 0 2px #0099ff; /* Text shadow for emphasis */
-}
-
-/* Background effect for icons, adding depth and visual interest */
-.home-social-icons::before {
-  content: ""; /* Necessary for pseudo-elements */
-  position: absolute; /* Positions relative to the icon */
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width of the icon */
-  height: 100%; /* Full height of the icon */
-  border-radius: 50%; /* Maintains circular shape */
-  background: var(--navbar-toggler-color); /* Blue background for thematic consistency */
-  transition: 0.5s; /* Smooth transition for hover effects */
-  z-index: -1; /* Sits behind the icon */
-}
-
-/* Enhances the hover effect, making the background and shadow more pronounced */
-.home-social-icons:hover::before {
-  transform: scale(1.1); /* Scales up for a subtle pop */
-  box-shadow: 0 0 15px #0072fd; /* Larger shadow for depth */
-}
-
-/* Additional styling for other social icons not specifically classified */
-.social-icons {
-  display: inline-block !important; /* Inline with block behaviors */
-  padding-right: 15px; /* Spacing to the right */
-  padding-left: 15px; /* Spacing to the left */
-  pointer-events: auto; /* Enables pointer events for interaction */
-}
-
 /* Specific color styling for icons */
 .icon-colour {
   color: #ffffff !important; /* Turquoise color for icons */
-}
-  
-  
-/* ------ */
-/* Footer */
-/* ------ */
-
-/* General footer styles, setting the background color, ensuring it sticks to the bottom, and applying padding for spacing. */
-.footer {
-  background-color: var(--footer-bg-color);; /* Dark blue background color */
-  bottom: 0 !important; /* Anchor to the bottom of its container */
-  padding-top: 10px !important; /* Space above footer content */
-  padding-bottom: 8px !important; /* Space below footer content */
-  backdrop-filter: blur(15px) !important; /* Blur effect on the background content */
-}
-
-/* Style for the copyright section of the footer, centering the text. */
-.footer-copywright {
-  text-align: center !important; /* Ensures text is always centered, important for responsiveness */
-}
-
-/* Style for the body of the footer containing links or info, centered. */
-.footer-body {
-  z-index: 1; /* Ensures the footer content is above other page elements if they overlap */
-  text-align: center !important; /* Centers the content, making it consistent and visually balanced */
-}
-
-/* Responsive adjustments for the footer on smaller screens. These ensure that the footer's content remains centered, no matter the screen size. */
-@media (max-width: 767px) {
-  .footer-copywright,
-  .footer-body {
-    text-align: center !important; /* Center aligns text for smaller screens, improving readability */
-  }
-}
-
-/* Style for headings within the footer, setting font size, color, and margin for visual hierarchy and spacing. */
-.footer h3 {
-  font-size: 1em; /* Sets a standard size for heading text within the footer */
-  color: white !important; /* Ensures high contrast of text against the dark background */
-  margin-top: 0.5em !important; /* Top margin for spacing */
-  margin-bottom: 0.5em !important; /* Bottom margin for spacing */
-}
-
-/* Style for icons container in the footer, adjusting margins and padding for layout and spacing. */
-.footer-icons {
-  margin-top: 0.5em !important; /* Top margin for spacing above the icons */
-  margin-bottom: 0.5em !important; /* Bottom margin for spacing below the icons */
-  padding: 0 !important; /* Removes padding to ensure alignment and spacing are consistent */
 }
 
 /* -------- */
@@ -608,4 +494,124 @@ button:focus {
 .btn:focus {
   outline: none !important; /* Remove focus outline */
   box-shadow: none !important; /* Remove focus shadow */
+}
+
+/* ------------ */
+/* Social Links */
+/* ------------ */
+
+/* Social links section within the about area, centered for visual balance */
+.home-about-social {
+  text-align: center !important; /* Ensures social icons are centered */
+  padding-top: 25px; /* Spacing above the social icons */
+  color: white !important; /* White color for icons for contrast */
+  z-index: 10; /* Higher than the tsparticles */
+  position: relative; /* Needed for z-index to take effect */
+}
+
+/* Container for social links, ensuring they are centered and properly spaced */
+.home-about-social-links {
+  justify-content: center !important; /* Centers social links horizontally */
+  padding-top: 15px !important; /* Spacing above the links */
+  display: inline-block !important; /* Allows for inline layout with block behaviors */
+  position: relative !important; /* Establishes a stacking context */
+  padding-inline-start: 0 !important; /* Removes default padding */
+  pointer-events: auto; /* Enables pointer events for interaction */
+}
+
+/* Individual social icon styling, including size, color, and interaction effects */
+.home-social-icons {
+  position: relative !important; /* Needed for positioning effects */
+  display: inline-block !important; /* Allows icons to sit side by side */
+  width: px !important; /* Fixed width for icons */
+  height: 40px !important; /* Fixed height for icons */
+  text-align: center !important; /* Centers the icon within the circle */
+  font-size: 2.2em !important; /* Size of the icon */
+  line-height: 3em !important; /* Centers the icon vertically */
+  background: #07a4d3 !important; /* White background with slight transparency */
+  border-radius: 40% !important; /* Rounds the edges into a circle */
+  transition: 0.5s !important; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for social icons, giving a sense of interaction */
+.home-social-icons:hover {
+  color: #207f9e; /* Changes icon color on hover */
+  box-shadow: 0 0 5px #0099ff; /* Shadow for depth */
+  text-shadow: 0 0 2px #0099ff; /* Text shadow for emphasis */
+}
+
+/* Background effect for icons, adding depth and visual interest */
+.home-social-icons::before {
+  content: ""; /* Necessary for pseudo-elements */
+  position: absolute; /* Positions relative to the icon */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the icon */
+  height: 100%; /* Full height of the icon */
+  border-radius: 50%; /* Maintains circular shape */
+  background: var(--navbar-toggler-color); /* Blue background for thematic consistency */
+  transition: 0.5s; /* Smooth transition for hover effects */
+  z-index: -1; /* Sits behind the icon */
+}
+
+/* Enhances the hover effect, making the background and shadow more pronounced */
+.home-social-icons:hover::before {
+  transform: scale(1.1); /* Scales up for a subtle pop */
+  box-shadow: 0 0 15px #0072fd; /* Larger shadow for depth */
+}
+
+/* Additional styling for other social icons not specifically classified */
+.social-icons {
+  display: inline-block !important; /* Inline with block behaviors */
+  padding-right: 15px; /* Spacing to the right */
+  padding-left: 15px; /* Spacing to the left */
+  pointer-events: auto; /* Enables pointer events for interaction */
+}
+
+
+/* ------ */
+/* Footer */
+/* ------ */
+
+/* General footer styles, setting the background color, ensuring it sticks to the bottom, and applying padding for spacing. */
+.footer {
+  background-color: var(--footer-bg-color);; /* Dark blue background color */
+  bottom: 0 !important; /* Anchor to the bottom of its container */
+  padding-top: 10px !important; /* Space above footer content */
+  padding-bottom: 8px !important; /* Space below footer content */
+  backdrop-filter: blur(15px) !important; /* Blur effect on the background content */
+}
+
+/* Style for the copyright section of the footer, centering the text. */
+.footer-copywright {
+  text-align: center !important; /* Ensures text is always centered, important for responsiveness */
+}
+
+/* Style for the body of the footer containing links or info, centered. */
+.footer-body {
+  z-index: 1; /* Ensures the footer content is above other page elements if they overlap */
+  text-align: center !important; /* Centers the content, making it consistent and visually balanced */
+}
+
+/* Responsive adjustments for the footer on smaller screens. These ensure that the footer's content remains centered, no matter the screen size. */
+@media (max-width: 767px) {
+  .footer-copywright,
+  .footer-body {
+    text-align: center !important; /* Center aligns text for smaller screens, improving readability */
+  }
+}
+
+/* Style for headings within the footer, setting font size, color, and margin for visual hierarchy and spacing. */
+.footer h3 {
+  font-size: 1em; /* Sets a standard size for heading text within the footer */
+  color: white !important; /* Ensures high contrast of text against the dark background */
+  margin-top: 0.5em !important; /* Top margin for spacing */
+  margin-bottom: 0.5em !important; /* Bottom margin for spacing */
+}
+
+/* Style for icons container in the footer, adjusting margins and padding for layout and spacing. */
+.footer-icons {
+  margin-top: 0.5em !important; /* Top margin for spacing above the icons */
+  margin-bottom: 0.5em !important; /* Bottom margin for spacing below the icons */
+  padding: 0 !important; /* Removes padding to ensure alignment and spacing are consistent */
 }

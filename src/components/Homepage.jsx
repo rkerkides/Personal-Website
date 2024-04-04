@@ -11,6 +11,7 @@ import cv from '../assets/RenosKerkidesCV.pdf';
 const Homepage = () => {
   return (
     <Container fluid className="home-section" id="home">
+    {/* Intro Section */}
     <Intro />
     <div className='background-shade'>
       <Row>
