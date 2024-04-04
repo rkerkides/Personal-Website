@@ -321,7 +321,7 @@ button:focus {
 /* General styling for the about section within the home page */
 .home-about-section {
   position: relative;
-  padding-bottom: 70px !important; /* Spacing at the bottom */
+  padding-bottom: 20px !important; /* Spacing at the bottom */
   padding-top: 70px !important; /* Spacing at the top */
 }
 
@@ -430,7 +430,6 @@ button:focus {
 /* This section styles the overall container of the projects, including its position, padding, and background. */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important; /* Uses a CSS variable for background color */
 }
