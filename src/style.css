@@ -74,140 +74,130 @@ button:focus {
 /* Navbar */
 /* ------ */
 
-/* Makes the navbar stick to the top of the viewport and applies a blur effect for a frosted glass look. */
+/* Base styles for the navbar, making it fixed and applying a transition for smoothness. */
+.navbar, .sticky {
+  position: fixed !important; /* Ensure navbar is fixed at the top */
+  transition: all 0.3s ease-out 0s !important; /* Smooth transition for any property changes */
+}
+
+/* Sticky Navbar Specific Styles */
+/* Makes the navbar stick to the top of the viewport and applies a frosted glass look with a blur effect. */
 .sticky {
-  background-color: var(--navbar-bg-color) !important; /* Semi-transparent dark background */
-  transition: all 0.3s ease-out 0s !important; /* Smooth transition for any changes */
+  background-color: var(--navbar-bg-color) !important; /* Semi-transparent background */
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important; /* Soft shadow for depth */
-  backdrop-filter: blur(15px) !important; /* Blur effect on the background content */
+  backdrop-filter: blur(15px) !important; /* Blur effect for the background content */
 }
 
-/* Base styles for the navbar, making it fixed and applying basic styling. */
+/* Navbar Basic Styles */
 .navbar {
-  position: fixed !important; /* Stick to the top */
-  transition: all 0.3s ease-out 0s !important; /* Smooth transition for any changes */
-  padding: 0.3rem 2rem !important; /* Spacing inside the navbar */
-  font-size: 1.2rem !important; /* Text size within the navbar */
+  padding: 0.3rem 2rem !important; /* Padding inside the navbar for space */
+  font-size: 1.2rem !important; /* Text size within the navbar for readability */
 }
 
-/* Styles for the navbar toggler, used for collapsing and expanding the navbar on smaller screens. */
+/* Navbar Toggler Styles */
+/* Styles for the navbar toggler, includes transparent background and border. */
 .navbar-toggler {
   position: relative !important;
-  background-color: transparent !important; /* Make the background transparent */
-  border-color: transparent !important; /* Make the border transparent */
+  background-color: transparent !important; /* Transparent background */
+  border-color: transparent !important; /* Transparent border */
 }
 
+/* Hamburger Icon Style */
 /* Style for the spans inside the navbar toggler, making them look like a hamburger icon. */
 .navbar-toggler span {
   display: block !important;
   background-color: #05838b !important; /* Turquoise color for the toggler lines */
   height: 4px !important;
   width: 27px !important;
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+  margin: 5px 0 !important; /* Spacing between lines */
   transform: rotate(0deg) !important;
-  left: 0 !important;
   opacity: 1 !important;
 }
 
+/* Focus and Active States for Toggler */
 /* Remove the outline on focus for the toggler and maintain styles when active. */
-.navbar-toggler:focus,
-.navbar-toggler:active {
+.navbar-toggler:focus, .navbar-toggler:active {
   outline: 0 !important;
 }
 
+/* Toggler Animation */
 /* Animations for the toggler lines when the navbar is expanded/collapsed. */
-.navbar-toggler span:nth-child(1),
-.navbar-toggler span:nth-child(3) {
-  transition: transform 0.35s ease-in-out !important;
+.navbar-toggler span:nth-child(1), .navbar-toggler span:nth-child(3) {
+  transition: transform 0.35s ease-in-out !important; /* Smooth transition for transformation */
 }
 
+/* 'X' Transformation */
 /* Transformations for the top and bottom lines of the toggler to create an 'X' when active. */
-.navbar-toggler:not(.collapsed) span:nth-child(1),
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
+.navbar-toggler:not(.collapsed) span:nth-child(1), .navbar-toggler:not(.collapsed) span:nth-child(3) {
   position: absolute !important;
   transform: rotate(135deg) !important; /* Rotate to form 'X' */
-  opacity: 0.9 !important;
 }
 
-/* Hide the middle span when toggler is active. */
+/* Middle Span Visibility */
+/* Hide the middle span when toggler is active to form the 'X'. */
 .navbar-toggler:not(.collapsed) span:nth-child(2) {
   height: 12px !important;
   visibility: hidden !important;
-  background-color: transparent !important;
 }
 
-/* Responsive adjustments for the navbar on smaller screens. */
-@media (max-width: 767px) {
-  .navbar {
-    padding: 1rem 2rem !important; /* Adjust padding */
-    font-size: 1.4rem !important; /* Adjust font size */
-    background-color: var(--particle-fixed-bg) !important; /* Darker background for better contrast */
-  }
-  .navbar-nav .nav-item a::after {
-    display: none !important; /* Hide the decorative after element */
-  }
-}
-
-/* Styling for the brand logo within the navbar. */
+/* Navbar Brand and Logo Styles */
 .navbar-brand {
-  color: rgb(250, 250, 250) !important; /* Light color for visibility */
+  color: rgb(250, 250, 250) !important; /* Light color for visibility against the background */
 }
 
-/* Adjustments for the logo size. */
 .logo {
-  width: 3.5em !important;
+  width: 3.5em !important; /* Logo size adjustment */
 }
 
-/* Styles for navigation links within the navbar. */
-.navbar-nav .nav-link,
-.navbar-nav .nav-item a {
-  color: white !important; /* Ensures readability against the navbar background */
-  padding-right: 1rem !important; /* Spacing to the right of each nav item */
-  padding-left: 1rem !important; /* Spacing to the left of each nav item */
-  cursor: pointer; /* Ensures the cursor changes to a pointer to indicate clickability */
+/* Navbar Navigation Link Styles */
+/* Styling for navigation links within the navbar, including flexbox for alignment. */
+.navbar-nav .nav-link, .navbar-nav .nav-item a {
+  color: white !important; /* Text color for readability */
+  padding: 0 1rem !important; /* Horizontal spacing */
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 8px; /* Space between icon and text */
 }
 
-/* Responsive adjustments for nav links on smaller screens. */
-@media (max-width: 767px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important; /* Adjust padding */
-  }
-}
-
-/* Positioning and styling for navbar items. */
+/* Navbar Item Positioning */
 .navbar-nav .nav-item {
   position: relative;
   margin-left: 20px; /* Spacing between navbar items */
 }
 
-/* Base styles for navbar item links, including a hover effect. */
-.navbar-nav .nav-item a {
-  font-weight: 400;
-  transition: all 0.3s ease-out 0s; /* Smooth transition for hover effects */
-  position: relative; /* Ensures proper layering of pseudo-elements */
-  z-index: 1; /* Keeps link text above pseudo-elements */
-}
-
-/* Add an animated underline effect on hover */
+/* Hover Effect for Navbar Links */
 .navbar-nav .nav-item a::after {
-  content: ""; /* Necessary for the pseudo-element to display */
-  position: absolute; /* Position relative to the link text */
-  bottom: 1px; /* Position just below the text */
-  left: 0; /* Align with the start of the text */
-  display: block; /* Display as a block element */
-  height: 5px; /* Height of the underline */
-  width: 0; /* Start width at 0 to animate */
-  border-radius: 16px; /* Rounded corners for the underline */
-  background: var(--underline-color); /* Turquoise background for the underline */
-  z-index: -1; /* Place the underline below the text */
-  transition: all 0.3s ease-out 0s; /* Smooth transition for the animation */
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  display: block;
+  height: 5px;
+  width: 0;
+  border-radius: 16px;
+  background: var(--underline-color); /* Color of the underline */
+  z-index: -1;
+  transition: all 0.3s ease-out 0s; /* Animation for expanding underline */
 }
 
-/* Expand the underline on hover */
 .navbar-nav .nav-item a:hover::after {
-  width: 100%; /* Expand underline to full width */
+  width: 100%; /* Expand the underline on hover */
 }
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .navbar, .navbar-nav .nav-link {
+    padding: 1rem 2rem !important; /* Adjust padding for smaller screens */
+    font-size: 1.4rem !important; /* Increase font size for readability on smaller devices */
+    background-color: var(--particle-fixed-bg) !important; /* Ensure contrast and visibility */
+  }
+
+  .navbar-nav .nav-item a::after {
+    display: none !important; /* Remove underline effect on smaller screens for simplicity */
+  }
+}
+
 
 /* --------- */
 /* Home section */
