@@ -16,7 +16,7 @@ function ProjectCards(props) {
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" style={imgStyle} />
       <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
-        <Card.Title style={{ color: "#73eaff" }}>
+        <Card.Title style={{ color: "#6ed0ed" }}>
           <strong>{props.title}</strong>
         </Card.Title>
         <Card.Text style={{ textAlign: "justify", flex: 1 }}>

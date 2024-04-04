@@ -9,9 +9,9 @@ const Socials = () => {
     <div>
       <Row>
           <Col md={12} className="home-about-social">
-            <h1>
+            <h4>
               <span className="turquoise">Connect </span>with me!
-            </h1>
+            </h4>
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <Link to={"https://github.com/rkerkides"}

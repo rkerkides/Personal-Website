@@ -2,7 +2,7 @@
 :root {
   --primary-bg-color: #100079;
   --scrollbar-track-color: #014eca;
-  --scrollbar-thumb-color: rgba(15, 115, 132, 0.959);
+  --scrollbar-thumb-color: rgba(15, 118, 132, 0.959);
   --scrollbar-thumb-hover-color: rgba(21, 4, 212, 0.911);
   --navbar-bg-color: rgb(0, 25, 43);
   --navbar-toggler-color: #02d9ff;
@@ -106,7 +106,7 @@ button:focus {
 /* Style for the spans inside the navbar toggler, making them look like a hamburger icon. */
 .navbar-toggler span {
   display: block !important;
-  background-color: #05838b !important; /* Turquoise color for the toggler lines */
+  background-color: #05b2d1 !important; /* Turquoise color for the toggler lines */
   height: 4px !important;
   width: 27px !important;
   margin: 5px 0 !important; /* Spacing between lines */
@@ -445,7 +445,7 @@ button:focus {
   text-align: center !important; /* Centers the icon within the circle */
   font-size: 2.2em !important; /* Size of the icon */
   line-height: 3em !important; /* Centers the icon vertically */
-  background: var(--navbar-toggler-color) !important; /* White background with slight transparency */
+  background: #07a4d3 !important; /* White background with slight transparency */
   border-radius: 40% !important; /* Rounds the edges into a circle */
   transition: 0.5s !important; /* Smooth transition for hover effects */
 }
@@ -595,7 +595,7 @@ button:focus {
 /* Primary button styles, including colors, borders, and hover effects. */
 .btn-primary {
   color: #fff !important;
-  background-color: var(--navbar-toggler-color) !important; /* Turquoise background */
+  background-color: #07a4d3 !important; /* Turquoise background */
   border-color: #00eeff !important; /* Matching border color */
 }
 
@@ -609,4 +609,3 @@ button:focus {
   outline: none !important; /* Remove focus outline */
   box-shadow: none !important; /* Remove focus shadow */
 }
-

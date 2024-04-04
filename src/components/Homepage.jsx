@@ -69,8 +69,10 @@ const Homepage = () => {
             target="_blank"
             style={{ maxWidth: "300px" }}
           >
+            <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
             <AiOutlineDownload />
             &nbsp;Download CV
+            </span>
           </Button>
         </Row>
       </div>
