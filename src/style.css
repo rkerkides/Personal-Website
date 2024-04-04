@@ -159,7 +159,6 @@ button:focus {
   align-items: center; /* Center items vertically */
   gap: 8px; /* Space between icon and text */
   margin-bottom: 10px;
-  margin-left: 100px;
 }
 
 /* Navbar Item Positioning */
