@@ -4,9 +4,9 @@ import ProjectCard from "./ProjectCards";
 import Duelyst from "../assets/ProjectImages/DuelystClone.webp";
 import LearnHub from "../assets/ProjectImages/LearnHub.webp";
 import ParallelP from "../assets/ProjectImages/ParallelProcessing.webp";
-import OldFolio from "../assets/ProjectImages/RenosKerkides.webp";
+import OldFolio from "../assets/ProjectImages/PortfolioOld.webp";
 import SwiftFolder from "../assets/ProjectImages/SwiftFolder.webp";
-import NewFolio from "../assets/ProjectImages/NewFolio.webp";
+import NewFolio from "../assets/ProjectImages/Portfolio.webp";
 
 
 function Projects() {

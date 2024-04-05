@@ -7,9 +7,9 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   // Style object for Card.Img
   const imgStyle = {
-    height: '200px', // Fixed height
     width: '100%', // Width is set to 100% to match the card's width
-    objectFit: 'cover', // 'cover' will ensure the image covers the area, cropping it if necessary
+    height: 'auto', // Adjust height to 'auto' to maintain the aspect ratio
+    objectFit: 'contain', // 'contain' will ensure the whole image is visible within the container without being cut off
   };
 
   return (
