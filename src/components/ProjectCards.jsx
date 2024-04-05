@@ -19,7 +19,7 @@ function ProjectCards(props) {
         <Card.Title style={{ color: "#6ed0ed" }}>
           <strong>{props.title}</strong>
         </Card.Title>
-        <Card.Text style={{ textAlign: "justify", flex: 1 }}>
+        <Card.Text style={{ textAlign: "left", flex: 1 }}>
           {props.description}
         </Card.Text>
         <div style={{ display: 'flex', gap: '10px', marginTop: 'auto', justifyContent: 'center' }}>
