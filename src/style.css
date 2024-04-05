@@ -189,13 +189,23 @@ button:focus {
 /* Responsive Adjustments */
 @media (max-width: 767px) {
   .navbar, .navbar-nav .nav-link {
-    padding: 1rem 2rem !important; /* Adjust padding for smaller screens */
+    padding: 0.5rem 1rem !important; /* Adjust padding for smaller screens */
     font-size: 1.4rem !important; /* Increase font size for readability on smaller devices */
     background-color: var(--particle-fixed-bg) !important; /* Ensure contrast and visibility */
   }
 
   .navbar-nav .nav-item a::after {
     display: none !important; /* Remove underline effect on smaller screens for simplicity */
+  }
+
+  .navbar-brand .logo {
+    width: 2.5em !important; /* Reduced logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0 0.5rem !important; /* Reduced horizontal spacing */
+    font-size: 1rem !important; /* Smaller font size for nav items */
   }
 }
 
@@ -245,7 +255,7 @@ button:focus {
 
 /* Padding at the top of the home header, creating space */
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 50px !important;
 }
 
 /* The main container for the home section, setting up background image and positioning */
@@ -305,9 +315,9 @@ button:focus {
   }
 }
 
-/* Styles for avatar positioning and spacing within the home section */
+/* Styles for logo positioning and spacing within the home section */
 .Logo {
-  justify-content: center !important; /* Center avatar horizontally */
+  justify-content: center !important; /* Center logo horizontally */
   padding-top: 9em !important; /* Space from the top */
 }
 
@@ -322,7 +332,6 @@ button:focus {
 .home-about-section {
   position: relative;
   padding-bottom: 20px !important; /* Spacing at the bottom */
-  padding-top: 70px !important; /* Spacing at the top */
 }
 
 /* Styles for the about section's description, ensuring readability and focus */
