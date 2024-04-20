@@ -17,7 +17,7 @@ function About() {
               With both a 
               <i>
                 <b className="turquoise"> BSc </b> in <b className="turquoise"> Business Psychology </b>from <b className="turquoise"> Loughborough University </b>
-              </i>, as well as an 
+              </i>, and an 
               <i>
                 <b className="turquoise"> MSc </b> in <b className="turquoise"> Software Development </b>from the <b className="turquoise"> University of Glasgow </b>
               </i>
