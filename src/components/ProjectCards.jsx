@@ -23,12 +23,14 @@ function ProjectCards(props) {
           {props.description}
         </Card.Text>
         <div style={{ display: 'flex', gap: '10px', marginTop: 'auto', justifyContent: 'center' }}>
-          <Button variant="primary" href={props.ghLink} target="_blank">
-            <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-              <BsGithub />
-              GitHub
-            </span>
-          </Button>
+          {!props.disableGithub && (
+            <Button variant="primary" href={props.ghLink} target="_blank">
+              <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                <BsGithub />
+                GitHub
+              </span>
+            </Button>
+          )}
           {props.demoLink && (
             <Button
               variant="primary"

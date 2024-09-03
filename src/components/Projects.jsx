@@ -4,30 +4,49 @@ import ProjectCard from "./ProjectCards";
 import Duelyst from "../assets/ProjectImages/DuelystClone.webp";
 import LearnHub from "../assets/ProjectImages/LearnHub.webp";
 import ParallelP from "../assets/ProjectImages/ParallelProcessing.webp";
-import OldFolio from "../assets/ProjectImages/PortfolioOld.webp";
 import SwiftFolder from "../assets/ProjectImages/SwiftFolder.webp";
 import NewFolio from "../assets/ProjectImages/Portfolio.webp";
-
+import MindfulProgress from "../assets/ProjectImages/MindfulProgress.webp";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Container>
-        <h1 className="project-heading">
+        <h1 className="project-heading" style={{ textAlign: "justify" }}>
           My Recent <strong className="turquoise">Projects </strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p style={{ color: "white", textAlign: "justify" }}>
           Have a look at some of my most recent work!
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={MindfulProgress}
+              title="MindfulProgress"
+              description={
+                <span >
+                  An innovative platform that enhances traditional therapy by offering continuous, personalized mental health support. 
+                  Developed for my MSc dissertation, this project remains closed-source due to its potential for commercialization. Built with Django, 
+                  ReactJS, React Native (Expo), PostgreSQL, Celery, and Redis.
+                </span>
+              }
+              demoLink="https://mindfulprogress.netlify.app/login/"
+              disableGithub={true}
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={Duelyst}
               title="Duelyst II Clone"
-              description="The aim of this project was to recreate the charm of the original 
-              game on Steam. With the frontend design and necessary assets already available, 
-              my mission was to build a backend system that works perfectly with what's already 
-              been set up, including the development of a competent AI player!"
+              description={
+                <span >
+                  The aim of this project was to recreate the charm of the original 
+                  game on Steam. With the frontend design and necessary assets already available, 
+                  my mission was to build a backend system that works perfectly with what's already 
+                  been set up, including the development of a competent AI player!
+                </span>
+              }
               ghLink="https://github.com/rkerkides/Duelyst-II-Clone"
             />
           </Col>
@@ -36,9 +55,13 @@ function Projects() {
             <ProjectCard
               imgPath={LearnHub}
               title="Learnhub"
-              description="A web application meant to serve as a social-media with diverse topics, 
-              where you can share your information, learn things, and engage in lively conversations.
-              Built with Django."
+              description={
+                <span >
+                  A web application meant to serve as a social-media with diverse topics, 
+                  where you can share your information, learn things, and engage in lively conversations.
+                  Built with Django.
+                </span>
+              }
               ghLink="https://github.com/zzoltan-glasgow/learnhub"
               demoLink="https://learnhub.pythonanywhere.com/"
             />
@@ -48,10 +71,14 @@ function Projects() {
             <ProjectCard
               imgPath={SwiftFolder}
               title="SwiftFolder"
-              description="Born from my own personal frustration of navigating through multiple folders for specific projects, 
-              SwiftFolder is a streamlined desktop application designed for effortlessly creating, organizing, and accessing 
-              collections of regularly utilized directories. Built with Python and Tkinter."
-              ghLink="https://github.com/rkerkides/SwiftFolder"       
+              description={
+                <span >
+                  Born from my own personal frustration of navigating through multiple folders for specific projects, 
+                  SwiftFolder is a streamlined desktop application designed for effortlessly creating, organizing, and accessing 
+                  collections of regularly utilized directories. Built with Python and Tkinter.
+                </span>
+              }
+              ghLink="https://github.com/rkerkides/SwiftFolder"
             />
           </Col>
 
@@ -59,9 +86,13 @@ function Projects() {
             <ProjectCard
               imgPath={ParallelP}
               title="Parallel-Processing Calculator"
-              description="Designed to manage and execute long-running computational tasks asynchronously, this was my first attempt at
-              multi-threading techniques for concurrency. Utilizing an ExecutorService, it efficiently handles task execution across multiple threads, 
-              maximizing resource utilization and improving performance for computation-intensive operations."
+              description={
+                <span >
+                  Designed to manage and execute long-running computational tasks asynchronously, this was my first attempt at
+                  multi-threading techniques for concurrency. Utilizing an ExecutorService, it efficiently handles task execution across multiple threads, 
+                  maximizing resource utilization and improving performance for computation-intensive operations.
+                </span>
+              }
               ghLink="https://github.com/rkerkides/Parallel-Processing-Calculator"
             />
           </Col>
@@ -70,20 +101,14 @@ function Projects() {
             <ProjectCard
               imgPath={NewFolio}
               title="This Personal Website!"
-              description="Serves as a dynamic portfolio of my projects, charting my evolution as a developer. What began as a 
-              simple exercise to hone my skills with React has now transformed into a long-term commitment, with plans for 
-              ongoing enhancement and expansion!              "
+              description={
+                <span >
+                  Serves as a dynamic portfolio of my projects, charting my evolution as a developer. What began as a 
+                  simple exercise to hone my skills with React has now transformed into a long-term commitment, with plans for 
+                  ongoing enhancement and expansion!
+                </span>
+              }
               ghLink="https://github.com/rkerkides/Personal-Website"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={OldFolio}
-              title="My Original Portfolio-site"
-              description="My original portfolio before this one, developed primarily as a means to practice my skills with Django, with less of a focus on design."
-              ghLink="https://github.com/rkerkides/MyPortfolioSite"
-              demoLink="https://rkerkides.pythonanywhere.com/"
             />
           </Col>
         </Row>
