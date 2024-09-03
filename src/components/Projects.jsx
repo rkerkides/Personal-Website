@@ -12,10 +12,10 @@ function Projects() {
   return (
     <Container fluid className="project-section">
       <Container>
-        <h1 className="project-heading" style={{ textAlign: "justify" }}>
+        <h1 className="project-heading">
           My Recent <strong className="turquoise">Projects </strong>
         </h1>
-        <p style={{ color: "white", textAlign: "justify" }}>
+        <p style={{ color: "white" }}>
           Have a look at some of my most recent work!
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
