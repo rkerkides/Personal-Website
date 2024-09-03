@@ -1,53 +1,49 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
 import {
   DiJavascript1,
   DiReact,
-  DiNodejs,
   DiPython,
   DiGit,
   DiJava,
   DiDjango,
   DiBootstrap,
-  DiSqllite
+  DiSqllite,
 } from "react-icons/di";
-import {SiPostgresql} from "react-icons/si";
+import { SiPostgresql, SiTypescript, SiRedis, SiExpo } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
+import { FaReact } from "react-icons/fa";
 
 function Techstack() {
+  const techs = [
+    { icon: <DiJava />, name: "Java" },
+    { icon: <DiPython />, name: "Python" },
+    { icon: <DiJavascript1 />, name: "JavaScript" },
+    { icon: <DiReact />, name: "ReactJS and React Native" },
+    { icon: <SiPostgresql />, name: "PostgreSQL" },
+    { icon: <DiDjango />, name: "Django" },
+    { icon: <BiLogoSpringBoot />, name: "Spring Boot" },
+    { icon: <DiBootstrap />, name: "Bootstrap" },
+    { icon: <DiSqllite />, name: "SQLite" },
+    { icon: <DiGit />, name: "Git" },
+    { icon: <SiTypescript />, name: "TypeScript" },
+    { icon: <SiRedis />, name: "Redis" },
+    { icon: <SiExpo />, name: "Expo" },
+  ];
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiDjango />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <BiLogoSpringBoot />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiBootstrap />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiSqllite />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      
+      {techs.map((tech, index) => (
+        <OverlayTrigger
+          key={index}
+          placement="top"
+          overlay={<Tooltip id={`tooltip-${index}`}>{tech.name}</Tooltip>}
+        >
+          <Col xs={4} md={2} className="tech-icons">
+            <div className="icon-container">{tech.icon}</div>
+          </Col>
+        </OverlayTrigger>
+      ))}
     </Row>
   );
 }
