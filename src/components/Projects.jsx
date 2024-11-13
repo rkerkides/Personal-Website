@@ -25,9 +25,7 @@ function Projects() {
               title="MindfulProgress"
               description={
                 <span >
-                  An innovative platform that enhances traditional therapy by offering continuous, personalized mental health support. 
-                  Developed for my MSc dissertation, this project remains closed-source due to its potential for commercialization. Built with Django, 
-                  ReactJS, React Native (Expo), PostgreSQL, Celery, and Redis.
+                  Awarded the <em>IT+ Project Prize</em> at the University of Glasgow for the top MSc project of the year, this closed-source platform elevates traditional therapy with ongoing, personalized mental health support. Developed using Django, ReactJS, React Native, PostgreSQL, Celery, and Redis.
                 </span>
               }
               demoLink="https://mindfulprogress.netlify.app/login/"

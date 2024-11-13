@@ -14,40 +14,40 @@ function About() {
               ABOUT <span className="turquoise"> ME </span>
             </h1>
             <p className="home-about-body">
-              With both an
+              Hi there! I’m a recent
               <i>
-                <b className="turquoise"> MSc </b> in <b className="turquoise"> Software Development </b>from the <b className="turquoise"> University of Glasgow </b>
-              </i>, and a
+                <b className="turquoise"> MSc Software Development </b>
+              </i> graduate from the <b className="turquoise"> University of Glasgow</b>, where I had the honour of receiving the
               <i>
-                <b className="turquoise"> BSc </b> in <b className="turquoise"> Business Psychology </b>from <b className="turquoise"> Loughborough University </b>
-              </i>
-             
-              , I try to bring a unique perspective to tech, blending <b className="turquoise"> human insights </b> 
-              with <b className="turquoise">cutting-edge programming</b>!
+                <b className="turquoise"> IT+ Project Prize</b>
+              </i> for my MSc project. Before that, I studied
+              <i>
+                <b className="turquoise"> Business Psychology </b>
+              </i> at <b className="turquoise"> Loughborough University</b>, so I bring a blend of human understanding and tech skills to everything I do.
               <br />
-              <br />I feel most at home when programming in
+              <br />
+              I’m passionate about building software that genuinely makes a difference, and I enjoy working across a range of languages and tools. 
+              From 
               <i>
-                <b className="turquoise"> Java </b>
+                <b className="turquoise"> full-stack web development </b>
               </i>
-              but I am comfortable with a wide range of languages and frameworks:
+               to 
+               <i>
+                <b className="turquoise"> mobile apps</b>
+              </i>
+              , I love turning ideas into practical, user-friendly applications.
               <br />
               <br />
             </p>
             <Techstack />
             <p className="home-about-body">
-              I'm naturally curious and always looking to learn more about stuff; tech-related or otherwise!
-              <br />
-              <br />
-              Currently fascinated by, and trying to learn more about
-              <i>
-                <b className="turquoise"> Web Development, Mobile Development, Artificial Intelligence </b> and
-                {" "}
-                <b className="turquoise">
-                  Augmented Reality.
-                </b>
+                Driven by a deep curiosity, I am continually learning more about              <i>
+                <b className="turquoise"> Web and Mobile Development, AI,</b> and
+                <b className="turquoise"> Augmented Reality</b>.
               </i>
               <br />
               <br />
+              I’m excited to bring my skills, curiosity, and a fresh perspective to a team that’s ready to create something amazing!
             </p>
           </Col>
           <Col md={4} className="Logo">
